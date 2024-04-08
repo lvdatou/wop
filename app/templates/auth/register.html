@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% from 'bootstrap5/form.html' import render_form %}
+
+
+
+
+{% block body_content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class=" container">
+                {% for message in messages %}
+                    <div class = "alert alert-warning" role = "alert">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    {{render_form(form)}}
+
+{% endblock %}
+

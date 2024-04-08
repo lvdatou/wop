@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+
+<head>
+    {% block head %}
+    <link rel = "stylesheet" href ="{{url_for('static',filename = 'style.css')}}"/>
+    <title>{%block title%}{{title}}{% endblock %} -My Webpage</title>
+    {% endblock %}
+</head>
+
+<body>
+    <div id = "main">
+        {% block body_content %}
+
+        {% endblock %}
+
+    </div>
+
+    <div id = "footer">
+        {% block footer %}
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>
